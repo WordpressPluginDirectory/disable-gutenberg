@@ -404,7 +404,9 @@ function disable_gutenberg_whitelist_title($post_id = false) {
 	
 }
 
-function disable_gutenberg_explode($string = '') {
+function disable_gutenberg_explode($string) {
+	
+	if (!$string) $string = '';
 	
 	$explode = array_map('trim', explode(',', $string));
 	
